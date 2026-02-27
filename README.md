@@ -1,59 +1,166 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://laravel.com" target="_blank">
+<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
+</a>
 </p>
 
-## About Laravel
+<h1 align="center">📚 PIXLIB - Sistem Perpustakaan Digital</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+Project Tugas Laravel - Sistem Manajemen Perpustakaan Digital
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📌 Deskripsi Project
 
-## Learning Laravel
+**PIXLIB** adalah aplikasi perpustakaan digital berbasis Laravel yang digunakan untuk mengelola:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- 📖 Data Buku  
+- 🏷️ Kategori Buku  
+- 👨‍💼 Manajemen Petugas  
+- 👤 Manajemen User  
+- 📥 Peminjaman Buku  
+- 🕒 Riwayat Peminjaman  
+- 🧾 Cetak Bukti Peminjaman (PDF)  
+- ⭐ Ulasan Buku  
+- ❤️ Buku Favorit  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Aplikasi ini dibuat untuk memenuhi tugas pengembangan sistem berbasis framework Laravel.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🔐 Login Admin (Default)
 
-### Premium Partners
+Gunakan akun berikut untuk mengakses dashboard Admin:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+**Email:**  
+admin@gmail.com  
 
-## Contributing
+**Password:**  
+admin123  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 👥 Role Pengguna
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1️⃣ Admin
+- Mengelola buku
+- Mengelola kategori
+- Mengelola petugas
+- Melihat seluruh data peminjaman
+- Cetak laporan
 
-## Security Vulnerabilities
+### 2️⃣ Petugas/User
+- Melakukan peminjaman buku
+- Melihat riwayat peminjaman
+- Memberikan ulasan buku
+- Menambahkan buku ke favorit
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## ⚙️ Cara Instalasi & Menjalankan Project
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/rafkafathia15/PIXLIB.git
+```
+
+### 2️⃣ Masuk ke Folder Project
+
+```bash
+cd PIXLIB
+```
+
+### 3️⃣ Install Dependency Laravel
+
+```bash
+composer install
+```
+
+### 4️⃣ Copy File Environment
+
+Linux / Mac:
+```bash
+cp .env.example .env
+```
+
+Windows (CMD):
+```bash
+copy .env.example .env
+```
+
+### 5️⃣ Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6️⃣ Atur Database
+
+Buka file `.env` lalu ubah bagian berikut:
+
+```env
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7️⃣ Jalankan Migrasi Database
+
+```bash
+php artisan migrate
+```
+
+Jika menggunakan seeder:
+
+```bash
+php artisan db:seed
+```
+
+### 8️⃣ Jalankan Server
+
+```bash
+php artisan serve
+```
+
+Buka di browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- Laravel  
+- PHP  
+- MySQL  
+- Blade Template  
+- Tailwind CSS  
+- JavaScript  
+
+---
+
+## 📂 Struktur Folder Penting
+
+- `app/` → Controller & Model  
+- `resources/views/` → Tampilan Blade  
+- `routes/web.php` → Routing aplikasi  
+- `database/migrations/` → Struktur tabel database  
+
+---
+
+## 📝 Catatan
+
+- Folder `vendor` tidak diupload ke GitHub.
+- File `.env` tidak disertakan demi keamanan.
+- Jalankan `composer install` setelah clone project.
+
+---
+
+## 📄 License
+
+Project ini dibuat untuk keperluan pembelajaran dan tugas Sekolah.
