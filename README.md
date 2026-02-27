@@ -44,18 +44,36 @@ admin123
 
 ## 👥 Role Pengguna
 
-### 1️⃣ Admin
-- Mengelola buku
-- Mengelola kategori
-- Mengelola petugas
-- Melihat seluruh data peminjaman
-- Cetak laporan
+### 👑 1️⃣ Admin
+- Login dan Register  
+- Dashboard  
+- Mengelola Data User  
+- Mengelola Data Petugas  
+- Mengelola Data Kategori  
+- Mengelola Data Buku  
+- Melihat dan Mengelola Riwayat Peminjaman  
+- Cetak Laporan  
 
-### 2️⃣ Petugas/User
-- Melakukan peminjaman buku
-- Melihat riwayat peminjaman
-- Memberikan ulasan buku
-- Menambahkan buku ke favorit
+---
+
+### 🧑‍💼 2️⃣ Petugas
+- Login dan Register  
+- Dashboard  
+- Validasi Peminjaman  
+- Mengelola Data Peminjaman  
+- Melihat Data Rating / Ulasan  
+
+---
+
+### 👤 3️⃣ User
+- Login dan Register  
+- Dashboard  
+- Melihat Katalog Buku  
+- Mengisi Formulir Peminjaman  
+- Melihat Riwayat Peminjaman  
+- Memberikan Ulasan Buku  
+- Mengelola Profil User  
+- Menambahkan Buku ke Favorit  
 
 ---
 
@@ -99,7 +117,7 @@ php artisan key:generate
 
 ### 6️⃣ Atur Database
 
-Buka file `.env` lalu ubah bagian berikut:
+Buka file `.env` lalu ubah bagian berikut sesuai database kamu:
 
 ```env
 DB_DATABASE=nama_database
@@ -155,9 +173,9 @@ http://127.0.0.1:8000
 
 ## 📝 Catatan
 
-- Folder `vendor` tidak diupload ke GitHub.
-- File `.env` tidak disertakan demi keamanan.
-- Jalankan `composer install` setelah clone project.
+- Folder `vendor` tidak diupload ke GitHub.  
+- File `.env` tidak disertakan demi keamanan.  
+- Jalankan `composer install` setelah clone project.  
 
 ---
 
